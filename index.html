@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>虎尾渡假村登入頁面</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url('assets/background.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    .login-container h2 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .btn-custom {
+      width: 100%;
+      font-size: 18px;
+    }
+    .form-control {
+      font-size: 16px;
+    }
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-switch">
+    <button id="switch-lang" class="btn btn-light">中文 / ENGLISH</button>
+  </div>
+
+  <div class="login-container">
+    <h2 id="login-header" data-translate>請輸入您的 RFID 登入</h2>
+    <form id="loginForm">
+      <div class="mb-3">
+        <label for="rfidInput" class="form-label" id="rfid-label" data-translate>RFID 識別碼</label>
+        <input type="text" class="form-control" id="rfidInput" placeholder="請輸入RFID" required data-translate-placeholder>
+      </div>
+      <button type="submit" class="btn btn-primary btn-custom" id="loginButton" data-translate>登入</button>
+    </form>
+  </div>
+
+  <!-- 引用外部腳本 -->
+  <script src="script.js" type="module"></script>
+</body>
+</html>
