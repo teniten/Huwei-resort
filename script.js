@@ -497,7 +497,6 @@ if (buyButton && buynumInput) {
       if (balanceDisplay) {
         balanceDisplay.textContent = `${updatedBalance} 元`;
       }
-      location.reload(true); // 強制重新整理並忽略緩存
     } catch (error) {
       speak("購買失敗"); // 播報提示訊息
       console.error("購買失敗：", error);
@@ -648,7 +647,6 @@ depositButton.addEventListener("click", async () => {
               checkUserStatus(); // 購票後更新狀態
               // 更新交易紀錄圖表
               loadTransactionHistory();
-              location.reload(true); // 強制重新整理並忽略緩存
             });
           })
           .catch((error) => {
